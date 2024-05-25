@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: lightblue url("../assets/hexagons.jpg") no-repeat fixed center top;
+  background-size: cover;
+  //background-color: cornflowerblue;
+}
+
+.group {
+  background-color: whitesmoke;
+}
+
+.mat-tab-group {
+  max-height: 600px;
+  max-width: 600px;
+}

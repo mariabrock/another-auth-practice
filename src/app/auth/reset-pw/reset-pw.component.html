@@ -1,0 +1,27 @@
+<mat-card class="reset-form">
+
+  <mat-card-header>
+    <p>Please confirm new password.</p>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <form [formGroup]="resetGroup">
+
+      <mat-form-field>
+        <mat-label>New Password</mat-label>
+        <input matInput type="password" placeholder="Password" formControlName="newPassword">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+      </mat-form-field>
+
+      <button class="wide"
+        mat-raised-button
+        [disabled]="resetGroup.invalid" color="primary" (click)="reset()">Reset</button>
+    </form>
+  </mat-card-content>
+
+</mat-card>
