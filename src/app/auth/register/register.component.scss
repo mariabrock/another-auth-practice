@@ -1,15 +1,30 @@
-.register-form {
+.container{
   display: flex;
-  flex-direction: column;
   justify-content: center;
-}
+  align-items: center;
+  height: 100%;
+  width: 100%;
 
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  mat-card {
+    max-width: 600px;
+    width: 90%;
+    display: flex;
+    margin: .75rem;
+  }
 
-//.group {
-//  background-color: whitesmoke;
-//}
+  mat-card-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  mat-card-content {
+    flex: 1;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+}
