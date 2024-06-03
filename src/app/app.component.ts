@@ -6,11 +6,12 @@ import { MatIcon } from "@angular/material/icon";
 import { LoginComponent } from "./auth/login/login.component";
 import { RegisterComponent } from "./auth/register/register.component";
 import { ResetPwComponent } from "./auth/reset-pw/reset-pw.component";
+import { MatCard, MatCardActions, MatCardContent, MatCardHeader } from "@angular/material/card";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatTabGroup, MatTab, MatIcon, MatTabLabel, LoginComponent, RegisterComponent, ResetPwComponent],
+  imports: [CommonModule, RouterOutlet, MatTabGroup, MatTab, MatIcon, MatTabLabel, LoginComponent, RegisterComponent, ResetPwComponent, MatCard, MatCardHeader, MatCardContent, MatCardActions],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
