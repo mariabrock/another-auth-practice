@@ -1,27 +1,36 @@
-<mat-card class="reset-form">
+<div class="container">
 
-  <mat-card-header>
-    <p>Please confirm new password.</p>
-  </mat-card-header>
+  <mat-card class="reset-form">
 
-  <mat-card-content>
+    <mat-card-header>
+      <h1>Welcome to HEXPLODE!</h1>
+      <p>Please confirm new password.</p>
+    </mat-card-header>
 
-    <form [formGroup]="resetGroup">
+    <mat-card-content>
 
-      <mat-form-field>
-        <mat-label>New Password</mat-label>
-        <input matInput type="password" placeholder="Password" formControlName="newPassword">
-      </mat-form-field>
+      <form [formGroup]="resetGroup">
 
-      <mat-form-field>
-        <mat-label>Confirm Password</mat-label>
-        <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword">
-      </mat-form-field>
+        <mat-form-field>
+          <mat-label>New Password</mat-label>
+          <input matInput type="password" placeholder="Password" formControlName="newPassword">
+        </mat-form-field>
 
-      <button class="wide"
-        mat-raised-button
-        [disabled]="resetGroup.invalid" color="primary" (click)="reset()">Reset</button>
-    </form>
-  </mat-card-content>
+        <mat-form-field>
+          <mat-label>Confirm Password</mat-label>
+          <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+        </mat-form-field>
 
-</mat-card>
+        <button class="wide"
+          mat-raised-button
+          [disabled]="resetGroup.invalid" color="primary" (click)="reset()">Reset</button>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions class="btn-container">
+      <button mat-raised-button color="accent" routerLink="/login">Back</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</div>

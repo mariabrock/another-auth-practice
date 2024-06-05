@@ -1,19 +1,13 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+:host {
   height: 100%;
   width: 100%;
+}
+
+.app-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background: lightblue url("../assets/hexagons.jpg") no-repeat fixed center top;
   background-size: cover;
-  //background-color: cornflowerblue;
-}
-
-.group {
-  background-color: whitesmoke;
-}
-
-.mat-tab-group {
-  max-height: 600px;
-  max-width: 600px;
+  overflow: hidden;
 }

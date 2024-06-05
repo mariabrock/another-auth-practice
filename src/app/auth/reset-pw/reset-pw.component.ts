@@ -1,25 +1,27 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { MatButton } from "@angular/material/button";
-import { MatCard, MatCardContent, MatCardHeader } from "@angular/material/card";
+import { MatCard, MatCardActions, MatCardContent, MatCardHeader } from "@angular/material/card";
 import { MatFormField, MatLabel } from "@angular/material/form-field";
 import { MatInput } from "@angular/material/input";
-import { Router } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-reset-pw',
   standalone: true,
-	imports: [
-		FormsModule,
-		MatButton,
-		MatCard,
-		MatCardContent,
-		MatCardHeader,
-		MatFormField,
-		MatInput,
-		MatLabel,
-		ReactiveFormsModule
-	],
+  imports: [
+    FormsModule,
+    MatButton,
+    MatCard,
+    MatCardContent,
+    MatCardHeader,
+    MatFormField,
+    MatInput,
+    MatLabel,
+    ReactiveFormsModule,
+    MatCardActions,
+    RouterLink
+  ],
   templateUrl: './reset-pw.component.html',
   styleUrl: './reset-pw.component.scss'
 })

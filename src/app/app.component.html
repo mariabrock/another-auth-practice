@@ -1,34 +1,4 @@
-<div class="container">
-  <div class="group">
-    <mat-tab-group>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <mat-icon class="material-icons-outlined">login</mat-icon>
-          Login
-        </ng-template>
-
-        <app-login></app-login>
-      </mat-tab>
-
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <mat-icon class="material-icons-outlined">person</mat-icon>
-          Register
-        </ng-template>
-
-        <app-register></app-register>
-      </mat-tab>
-
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <mat-icon class="material-icons-outlined">password</mat-icon>
-          Password Reset
-        </ng-template>
-
-        <app-reset-pw></app-reset-pw>
-      </mat-tab>
-    </mat-tab-group>
-  </div>
+<div class="app-container">
+  <router-outlet></router-outlet>
 </div>
 
-<router-outlet></router-outlet>
