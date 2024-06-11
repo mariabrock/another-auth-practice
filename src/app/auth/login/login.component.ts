@@ -53,6 +53,7 @@ export class LoginComponent {
         console.log('response', response);
         localStorage.setItem('token', response.user.token);
         this.authService.currentUserSignal.set(response.user);
+        console.log(this.authService.currentUserSignal)
       })
     this.router.navigate(['/landing']).then()
   }

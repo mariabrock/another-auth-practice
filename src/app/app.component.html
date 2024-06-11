@@ -1,4 +1,9 @@
 <div class="app-container">
+  <mat-toolbar>
+    <span>Hexplode</span>
+    <span class="spacer"></span>
+    <a href="" *ngIf="authService.currentUserSignal()">Link</a>
+  </mat-toolbar>
   <router-outlet></router-outlet>
 </div>
 
