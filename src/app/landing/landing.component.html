@@ -1,12 +1,7 @@
   <mat-card class="container">
-    <div *ngIf="authService.currentUserSignal()">
-       Hello, {{ authService.currentUserSignal()?.username }}
-
-      <button *ngIf="authService.currentUserSignal()" mat-raised-button color="accent" class="icon" (click)="logout()">
-        Logout
-        <mat-icon>logout</mat-icon>
-      </button>
-    </div>
+    <h1 *ngIf="authService.currentUserSignal()">
+       Hello, {{ authService.currentUserSignal()?.username }}!
+    </h1>
   </mat-card>
 
 

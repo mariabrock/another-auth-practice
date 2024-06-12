@@ -7,7 +7,7 @@ import { MatInput } from "@angular/material/input";
 import { Router, RouterLink } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
 import { AuthService } from "../auth.service";
-import { User } from "../../interfaces/user";
+import { User } from "../../user/user";
 
 @Component({
   selector: 'app-login',

@@ -10,7 +10,7 @@ import { MatCard, MatCardActions, MatCardContent, MatCardHeader } from "@angular
 import { AuthService } from "./auth/auth.service";
 import { MatButton } from "@angular/material/button";
 import { MatToolbar } from "@angular/material/toolbar";
-import { User } from "./interfaces/user";
+import { User } from "./user/user";
 import { HttpClient } from "@angular/common/http";
 
 @Component({
@@ -25,8 +25,21 @@ export class AppComponent implements OnInit{
   http = inject(HttpClient);
 
   ngOnInit() {
-    this.http.get<{user: User}> ('https://api.realword.io/api/user').subscribe(response => {
-      console.log('response', response)
-    })
+    this.http.get<{user: User}> ('https://api.realword.io/api/user')
+        .subscribe({
+          next: (response) => {
+        console.log('response', response)
+          this.authService.currentUserSignal.set(response.user);
+      },
+        error: () => {
+        this.authService.currentUserSignal.set(null);
+      },
+    });
+  }
+
+  logout() {
+    console.log('logout app');
+    localStorage.setItem('token', '');
+    this.authService.currentUserSignal.set(null);
   }
 }

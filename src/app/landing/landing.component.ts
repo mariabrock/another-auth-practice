@@ -37,6 +37,6 @@ export class LandingComponent {
   authService = inject(AuthService);
 
   logout() {
-    console.log('logout')
+    console.log('logout landing')
   }
 }
