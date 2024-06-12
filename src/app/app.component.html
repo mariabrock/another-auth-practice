@@ -1,4 +1,13 @@
 <div class="app-container">
+  <mat-toolbar *ngIf="authService.currentUserSignal()">
+    <span>Hexplode</span>
+    <span class="spacer"></span>
+    <a href="">Link</a>
+    <button mat-raised-button color="accent" class="icon" (click)="logout()">
+      Logout
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
   <router-outlet></router-outlet>
 </div>
 

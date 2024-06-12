@@ -1,9 +1,7 @@
-<mat-card class="login-form">
-
-  <mat-card-header>
-    <p>landing works!</p>
-  </mat-card-header>
-
-</mat-card>
+  <mat-card class="container">
+    <h1 *ngIf="authService.currentUserSignal()">
+       Hello, {{ authService.currentUserSignal()?.username }}!
+    </h1>
+  </mat-card>
 
 

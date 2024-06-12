@@ -3,6 +3,7 @@ import { LoginComponent } from "./auth/login/login.component";
 import { RegisterComponent } from "./auth/register/register.component";
 import { ResetPwComponent } from "./auth/reset-pw/reset-pw.component";
 import { LandingComponent } from "./landing/landing.component";
+import { authGuard } from "./auth/auth.guard";
 
 export const routes: Routes = [
 
@@ -24,6 +25,7 @@ export const routes: Routes = [
   },
   {
     path: 'landing',
-    component: LandingComponent
+    component: LandingComponent,
+    canActivate: [authGuard]
   }
 ];
